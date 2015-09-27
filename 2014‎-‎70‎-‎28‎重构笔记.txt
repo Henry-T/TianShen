@@ -1,0 +1,7 @@
+- 清理GameManager 这里只放与Game无关的东西
+- 完全应用工作线程等待设计
+- 分离PlayerManager，并在此提供绝大多数网络接口
+- !! 数据只有一个权威持有人，其他模块实际上通过持有人访问，自己不能持有引用 省得去更新了
+- 支持按次序层叠调用异步任务，全部完成后主线程继续
+- 非真Key或Key意义不大还是不要用Dictionary了
+- 巧妙的Data类包装AVObject(getter setter),修改后SaveAsync,成功则不变，失败会被Avos回退~
